@@ -1,7 +1,8 @@
 import express from 'express';
  
 const app = express();
-const name = 'Scarlet Booth';
+// const name = 'Scarlet Booth';
+const name = process.env.NAME || 'Scarlet Booth';
  
 app.get('/', (req, res) => {
     res.send(`${name}`);
