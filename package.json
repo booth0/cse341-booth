@@ -11,6 +11,9 @@
   },
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "npm": ">=8.0.0"
+  }
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
