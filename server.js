@@ -1,8 +1,8 @@
 import express from 'express';
-import homeRoutes from './routes/home.js';
+import homeRoutes from './routes';
  
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
