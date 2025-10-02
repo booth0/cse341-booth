@@ -1,0 +1,11 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get one contact by query param
+GET http://localhost:3000/contacts?id=68ddbb348d93df0707f513e1
+
+### Get one contact by path param
+GET http://localhost:3000/contacts/68ddbb6d173f2d99b5d66177
+
+### Home route (from your homeController)
+GET http://localhost:3000/
