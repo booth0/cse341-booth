@@ -9,3 +9,30 @@ GET http://localhost:3000/contacts/68ddbb6d173f2d99b5d66177
 
 ### Home route (from your homeController)
 GET http://localhost:3000/
+
+### Create new contact :68e1c653e48bec1d54e0ca77
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Davis", 
+    "lastName": "Peter", 
+    "email": "pet30054@byui.edu",
+    "favoriteColor": "Red",
+    "birthday": "2001-08-10"
+}
+
+### Test new contact
+GET http://localhost:3000/contacts/68e1c653e48bec1d54e0ca77
+
+
+### Update contact (replace id)
+PUT http://localhost:3000/contacts/68e1c653e48bec1d54e0ca77
+Content-Type: application/json
+
+{
+    "favoriteColor": "Red"
+}
+
+### Delete contact (replace id)
+DELETE http://localhost:3000/contacts/68e1c653e48bec1d54e0ca77
