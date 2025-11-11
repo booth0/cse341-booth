@@ -5,6 +5,8 @@ const doc = {
     title: 'Contacts API',
     description: 'API for managing contacts with MongoDB'
   },
+  host: '',
+  schemes: [],
   tags: [
     {
       name: 'Contacts',
