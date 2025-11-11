@@ -1,11 +1,10 @@
-// routes/index.js
 import express from 'express';
-import homeRoutes from './home.js';
 import contactsRoutes from './contacts.js';
+import swaggerRoutes from './swagger.js';
 
 const router = express.Router();
 
-router.use('/', homeRoutes);
+router.use('/', swaggerRoutes);
 router.use('/contacts', contactsRoutes);
 
 export default router;
