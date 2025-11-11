@@ -1,6 +1,63 @@
 import Contact from '../models/contact.js';
 import mongoose from 'mongoose';
 
+const contactController = {
+    getAllContacts: async () => {
+        try {
+            return await Contact.find();
+        } catch (error) {
+            throw new Error('Error fetching contacts');
+        }
+    },
+
+    getContactById: async (id) => {
+    try {
+      return await Contact.findById(id);
+    } catch (error) {
+      throw new Error('Error fetching user');
+    }
+  },
+
+  // Create new contact
+  createContact: async (contactData) => {
+    try {
+      const contact = new Contact(contactData);
+      return await contact.save();
+    } catch (error) {
+      throw new Error('Error creating contact');
+    }
+  },
+
+  // Update contact
+  updateContact: async (id, contactData) => {
+    try {
+      return await Contact.findByIdAndUpdate(id, contactData, { 
+        new: true,
+        runValidators: true 
+      });
+    } catch (error) {
+      throw new Error('Error updating contact');
+    }
+  },
+
+  // Delete contact
+  deleteContact: async (id) => {
+    try {
+      await Contact.findByIdAndDelete(id);
+      return `Contact ${id} deleted successfully`;
+    } catch (error) {
+      throw new Error('Error deleting contact');
+    }
+  }
+};
+
+export default contactController;
+
+
+
+
+
+
 export const getAllContacts = async (req, res) => {
     try {
         const contacts = await Contact.find().lean();
