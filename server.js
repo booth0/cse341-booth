@@ -2,21 +2,17 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import routes from './routes/index.js';
-// import swaggerUi from 'swagger-ui-express';
-// import { readFileSync } from 'fs';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// const swaggerDocument = JSON.parse(readFileSync('./swagger.json', 'utf8'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', routes);
-// app.use('/api-docs', routes);
 
 const startServer = async () => {
   try {

@@ -27,7 +27,7 @@ const doc = {
       lastName: 'Doe',
       email: 'john.doe@example.com',
       favoriteColor: 'Blue',
-      birthday: '1990-01-01T00:00:00.000Z',
+      birthday: '1990-01-01',
       __v: 0
     },
     CreateContactResponse: {
